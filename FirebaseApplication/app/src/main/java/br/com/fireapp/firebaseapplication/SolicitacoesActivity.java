@@ -20,7 +20,7 @@ public class SolicitacoesActivity extends AppCompatActivity {
     private String key1;
     private String key2;
     private String key3;
-    private String endereco;
+    private String address;
     private Map<String, String> chamado;
     private Button button;
     private Button button2;
@@ -42,10 +42,10 @@ public class SolicitacoesActivity extends AppCompatActivity {
         key1 = args.getString("KEY1");
         key2 = args.getString("KEY2");
         key3 = args.getString("KEY3");
-        endereco = args.getString("ENDERECO");
+        address = args.getString("ADDRESS");
 
         chamado = new HashMap<String, String>();
-        chamado.put("endereco", endereco);
+        chamado.put("endereco", address);
         chamado.put("urgencia", key1);
         chamado.put("ciencia", key2);
         chamado.put("respiracao", key3);
@@ -60,7 +60,7 @@ public class SolicitacoesActivity extends AppCompatActivity {
         txt_urgencia.setText(key1);
         txt_consciente.setText(key2);
         txt_respiracao.setText(key3);
-        txt_endereco.setText(endereco);
+        txt_endereco.setText(address);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override

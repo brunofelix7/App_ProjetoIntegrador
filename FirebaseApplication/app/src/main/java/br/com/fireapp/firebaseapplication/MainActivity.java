@@ -1,17 +1,21 @@
 package br.com.fireapp.firebaseapplication;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
+import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AlertDialog;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -61,6 +65,7 @@ public class MainActivity extends AppCompatActivity
     //  AAtributos do Maps
     private GoogleMap mMap;
     private Button button;
+    private Button buttonGPS;
     private int PLACE_PICKER_REQUEST = 1;
     LocationRequest mLocationRequest;
     GoogleApiClient mGoogleApiClient;
@@ -88,11 +93,28 @@ public class MainActivity extends AppCompatActivity
 
 
         acionarSamu = (Button) findViewById(R.id.acionar_samu);
+        buttonGPS = (Button) findViewById(R.id.gps);
+
+        //  SE O GPS ESTIVER HABILITADO, NÃO EXIBE O BOTÃO
+        final LocationManager manager = (LocationManager) getSystemService( Context.LOCATION_SERVICE );
+        if(!manager.isProviderEnabled(LocationManager.GPS_PROVIDER)){
+            buttonGPS.setVisibility(View.GONE);
+        }
+
+        buttonGPS.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivityForResult(new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS), 1);
+            }
+        });
 
         acionarSamu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, ChamadoActivity1.class);
+                Bundle params = new Bundle();
+                params.putString("ADDRESS", address);
+                intent.putExtras(params);
                 startActivity(intent);
             }
         });

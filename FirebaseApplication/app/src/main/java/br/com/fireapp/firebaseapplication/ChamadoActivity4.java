@@ -15,7 +15,7 @@ public class ChamadoActivity4 extends AppCompatActivity {
     private Button button;
     private String key1;
     private String key2;
-    private String endereco = "Rua Estevao Gérson Carneiro da Cunha";
+    private String address;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +26,7 @@ public class ChamadoActivity4 extends AppCompatActivity {
         Bundle args = getIntent().getExtras();
         key1 = args.getString("KEY1");
         key2 = args.getString("KEY2");
+        address = args.getString("ADDRESS");
 
         radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
         button = (Button) findViewById(R.id.proximo);
@@ -43,7 +44,7 @@ public class ChamadoActivity4 extends AppCompatActivity {
                 params.putString("KEY1", key1);
                 params.putString("KEY2", key2);
                 params.putString("KEY3", opcaoSelecionada);
-                params.putString("ENDERECO", endereco);
+                params.putString("ADDRESS", address);
                 intent.putExtras(params);
                 startActivity(intent);
                 finish();

@@ -15,6 +15,7 @@ public class ChamadoActivity3 extends AppCompatActivity {
     private RadioButton radioButton;
     private Button button;
     private String key1;
+    private String address;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +25,7 @@ public class ChamadoActivity3 extends AppCompatActivity {
         //  RECUPERANDO PARAMETROS
         Bundle args = getIntent().getExtras();
         key1 = args.getString("KEY1");
+        address = args.getString("ADDRESS");
 
         radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
         button = (Button) findViewById(R.id.proximo);
@@ -40,6 +42,7 @@ public class ChamadoActivity3 extends AppCompatActivity {
                 Bundle params = new Bundle();
                 params.putString("KEY1", key1);
                 params.putString("KEY2", opcaoSelecionada);
+                params.putString("ADDRESS", address);
                 intent.putExtras(params);
                 startActivity(intent);
                 finish();
