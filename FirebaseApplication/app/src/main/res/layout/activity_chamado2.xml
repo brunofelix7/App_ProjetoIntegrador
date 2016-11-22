@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_chamados2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    tools:context="br.com.fireapp.firebaseapplication.ChamadoActivity2">
+
+
+    <TextView
+        android:text="@string/text_chamado2_titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        android:layout_marginBottom="8dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000000"
+
+        android:layout_marginBottom="26dp"/>
+
+    <TextView
+        android:text="@string/text_chamado2_descricao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/id_radio1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Acidente de Carro"
+            android:layout_marginBottom="8dp"/>
+
+        <RadioButton
+            android:id="@+id/id_radio2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Acidente de Moto"
+            android:layout_marginBottom="8dp"/>
+
+        <RadioButton android:id="@+id/id_radio3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Desmaio repentino"
+            android:layout_marginBottom="8dp"/>
+
+        <RadioButton android:id="@+id/id_radio4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Outro"
+            android:layout_marginBottom="8dp"/>
+
+    </RadioGroup>
+
+
+    <EditText
+        android:id="@+id/outro"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:gravity="top"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        android:paddingLeft="8dp"
+        android:hint="Descreva aqui..."/>
+
+    <Button
+        android:text="Próximo"
+        android:textColor="#ffffff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableRight="@drawable/ic_action_seta"
+        android:paddingLeft="8dp"
+        android:drawablePadding="8dp"
+        android:background="@drawable/custom_button_blue"
+        android:id="@+id/proximo"
+        android:layout_marginTop="8dp" />
+
+</LinearLayout>

@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">SAMU Mobile</string>
+    <string name="title_activity_main" />
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Logout</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="text_login">Login</string>
+    <string name="hint_e_mail">E-mail</string>
+    <string name="text_senha">Senha</string>
+    <string name="text_entrar">Entrar</string>
+    <string name="text_criar_conta">Criar Conta</string>
+    <string name="text_chamado_titulo">Precisamos que você responda algumas informações.</string>
+    <string name="text_chamado_descricao">Para atendê-lo da melhor maneira possível, precisamos saber de alguns
+        que são cruciais para exelência do atendimento á vítima.</string>
+
+    <string name="text_chamado2_titulo">1. Classificação de Risco</string>
+    <string name="text_chamado2_descricao">Qual a sua Urgência?</string>
+
+    <string name="text_chamado3_titulo">2. Nível de Consciência</string>
+    <string name="text_chamado3_descricao">Como ele reage?</string>
+
+    <string name="text_chamado4_titulo">3. Nível de Respiração</string>
+    <string name="text_chamado4_descricao">Como está a respiração dele?</string>
+
+</resources>

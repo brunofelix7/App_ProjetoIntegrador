@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_chamado1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    tools:context="br.com.fireapp.firebaseapplication.ChamadoActivity1">
+
+
+    <TextView
+        android:text="@string/text_chamado_titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:textColor="#000000"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:text="@string/text_chamado_descricao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:text="Continuar"
+        android:textColor="#ffffff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableRight="@drawable/ic_action_seta"
+        android:paddingLeft="8dp"
+        android:drawablePadding="8dp"
+        android:background="@drawable/custom_button_blue"
+        android:id="@+id/contitunar"
+        android:layout_marginTop="8dp" />
+
+
+</LinearLayout>

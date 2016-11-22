@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login"
+    android:background="#263238"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context="br.com.fireapp.firebaseapplication.LoginActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo_app_vertical" />
+
+    <TextView
+        android:text="@string/text_criar_conta"
+        android:textColor="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/textView"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:gravity="center_vertical"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:background="#ffffff"
+        android:layout_height="1dp"
+        android:layout_marginBottom="26dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="16dp"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:background="#37474F"
+        android:padding="8dp"
+        android:id="@+id/id_email"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:hint="@string/hint_e_mail"
+        android:drawableRight="@drawable/ic_action_email"
+        android:drawablePadding="16dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:background="#37474F"
+        android:padding="8dp"
+        android:id="@+id/id_senha"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:hint="@string/text_senha"
+        android:layout_marginBottom="16dp"
+        android:drawableRight="@drawable/ic_action_senha"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:drawablePadding="16dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:background="#37474F"
+        android:padding="8dp"
+        android:id="@+id/id_confirmar_senha"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:hint="Confirmar senha"
+        android:layout_marginBottom="8dp"
+        android:drawableRight="@drawable/ic_action_senha2"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:drawablePadding="16dp"/>
+
+    <Button
+        android:text="Cadastrar"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/custom_button_blue"
+        android:id="@+id/id_cadastrar"
+        android:layout_marginTop="8dp" />
+
+</LinearLayout>
