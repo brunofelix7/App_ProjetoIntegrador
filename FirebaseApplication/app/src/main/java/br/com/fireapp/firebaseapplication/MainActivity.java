@@ -62,10 +62,10 @@ public class MainActivity extends AppCompatActivity
     private String numeroSamu = "192";
     private Button acionarSamu;
 
-    //  AAtributos do Maps
+    //  Atributos do Maps
     private GoogleMap mMap;
     private Button button;
-    private Button buttonGPS;
+    //private Button buttonGPS;
     private int PLACE_PICKER_REQUEST = 1;
     LocationRequest mLocationRequest;
     GoogleApiClient mGoogleApiClient;
@@ -93,11 +93,13 @@ public class MainActivity extends AppCompatActivity
 
 
         acionarSamu = (Button) findViewById(R.id.acionar_samu);
+        /*
         buttonGPS = (Button) findViewById(R.id.gps);
 
         //  SE O GPS ESTIVER HABILITADO, NÃO EXIBE O BOTÃO
         final LocationManager manager = (LocationManager) getSystemService( Context.LOCATION_SERVICE );
         if(!manager.isProviderEnabled(LocationManager.GPS_PROVIDER)){
+            buttonGPS.setVisibility(View.INVISIBLE);
             buttonGPS.setVisibility(View.GONE);
         }
 
@@ -107,6 +109,7 @@ public class MainActivity extends AppCompatActivity
                 startActivityForResult(new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS), 1);
             }
         });
+        */
 
         acionarSamu.setOnClickListener(new View.OnClickListener() {
             @Override
