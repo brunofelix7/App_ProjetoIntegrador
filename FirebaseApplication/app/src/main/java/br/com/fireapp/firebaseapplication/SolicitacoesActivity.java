@@ -3,6 +3,7 @@ package br.com.fireapp.firebaseapplication;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -10,7 +11,9 @@ import android.widget.Toast;
 
 import com.firebase.client.Firebase;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -29,6 +32,8 @@ public class SolicitacoesActivity extends AppCompatActivity {
     private TextView txt_consciente;
     private TextView txt_respiracao;
     private Firebase mDatabase;
+    private Date date;
+    private Date hora;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +41,14 @@ public class SolicitacoesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_solicitacoes);
 
         mDatabase = new Firebase("https://fir-application-9d853.firebaseio.com/");
+
+        //  FORMATAR DATA E HORA
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        SimpleDateFormat horaFormat = new SimpleDateFormat("HH:mm:ss");
+        date = new Date();
+        hora = new Date();
+        String d = dateFormat.format(date);
+        String h = horaFormat.format(hora);
 
         //  RECUPERANDO TODOS OS PARAMETROS DA SOLICITAÇÃO.
         Bundle args = getIntent().getExtras();
@@ -49,6 +62,9 @@ public class SolicitacoesActivity extends AppCompatActivity {
         chamado.put("urgencia", key1);
         chamado.put("ciencia", key2);
         chamado.put("respiracao", key3);
+        chamado.put("status", "Pendente");
+        chamado.put("data", d);
+        chamado.put("hora", h);
 
         txt_endereco = (TextView) findViewById(R.id.txt_endereco);
         txt_urgencia = (TextView) findViewById(R.id.txt_urgencia);
@@ -83,10 +99,6 @@ public class SolicitacoesActivity extends AppCompatActivity {
             }
         });
 
-
     }
-
-
-
 
 }
